@@ -1,0 +1,50 @@
+#NEXUS 
+
+Begin trees;  [Treefile saved Wed Feb 12 16:11:52 2020]
+[!
+>Data file = aligned.nex
+>Heuristic search settings:
+>  Optimality criterion = parsimony
+>    Character-status summary:
+>      Of 453 total characters:
+>        All characters are of type 'unord'
+>        All characters have equal weight
+>        201 characters are constant (proportion = 0.443709)
+>        108 variable characters are parsimony-uninformative
+>        Number of parsimony-informative characters = 144
+>    Gaps are treated as "missing"
+>  Starting tree(s) obtained via stepwise addition
+>    Addition sequence: random
+>    Number of replicates = 10
+>    Starting seed = generated automatically
+>    Number of trees held at each step = 1
+>  Branch-swapping algorithm: tree-bisection-reconnection (TBR) with reconnection limit = 8
+>    Steepest descent option not in effect
+>  Initial 'Maxtrees' setting = 100
+>  Branches collapsed (creating polytomies) if maximum branch length is zero
+>  'MulTrees' option in effect
+>  No topological constraints in effect
+>  Trees are unrooted
+>
+>Heuristic search completed
+>  Total number of rearrangements tried = 2197
+>  Score of best tree(s) found = 482
+>  Number of trees retained = 3
+>  Time used = 0.01 sec (CPU time = 0.00 sec)
+]
+	Translate
+		1 'NC_004578.1:6005880-6006326 [Pseudomonas syringae] pv. tomato str. DC3000 chromosome, complete genome',
+		2 'NZ_LHVM01000023.1:295415-295864 Pseudomonas sp. P1.8 PREFIX_contig_23, whole genome shotgun sequence',
+		3 'NZ_CP011566.1:6055432-6055881 Pseudomonas sp. DR 5-09, complete genome',
+		4 'NZ_CM001558.1:c6082702-6082256 Pseudomonas fluorescens Q2-87 chromosome, whole genome shotgun sequence',
+		5 'NZ_LJRH01000106.1:c1672-1226 Pseudomonas syringae pv. solidagae strain ICMP16925 PsoICMP16925_Contig_41, whole genome shotgun s',
+		6 'NZ_ALAT01000110.1:27601-28050 Pseudomonas luteola XLDN4-9 contig000110, whole genome shotgun sequence',
+		7 'NZ_FNKU01000001.1:c4482405-4481959 Pseudomonas cannabina strain ICMP 2823, whole genome shotgun sequence',
+		8 'NZ_FYDW01000002.1:571613-572056 Pseudomonas sp. Irchel s3f19 isolate Pseudomonas sp. Irchel s3f19, whole genome shotgun sequenc',
+		9 'NZ_JTGH01000009.1:c11020-10571 Pseudomonas fluorescens strain SF4c contig_9, whole genome shotgun sequence',
+		10 'NZ_AVEE02000201.1:41009-41455 Pseudomonas syringae CC1629 contig201.1, whole genome shotgun sequence'
+		;
+tree 'PAUP_1' = [&U] (1,(((((2,(3,9)),4),8),6),10),(5,7));
+tree 'PAUP_2' = [&U] (1,((((2,(3,9)),4),(6,8)),(5,7)),10);
+tree 'PAUP_3' = [&U] (1,((((2,(3,9)),4),(6,8)),10),(5,7));
+End;

@@ -1,0 +1,125 @@
+#NEXUS
+begin taxa;
+	dimensions ntax=23;
+	taxlabels
+	Aotus_trivirgatus
+	Callicebus_donacophilus
+	Cebus_albifrons
+	Cheirogaleus_major
+	Chlorocebus_aethiops
+	Colobus_guereza
+	Daubentonia_madagascariensis
+	Galago_senegalensis
+	Galeopterus_variegatus
+	Hylobates_lar
+	Lemur_catta
+	Lepilemur_hubbardorum
+	Loris_tardigradus
+	Macaca_mulatta
+	Microcebus_murinus
+	Nycticebus_coucang
+	Otolemur_crassicaudatus
+	Pan_paniscus
+	Perodicticus_potto
+	Propithecus_coquereli
+	Saimiri_sciureus
+	Tarsius_syrichta
+	Varecia_variegata_variegata
+;
+end;
+
+begin trees;
+	tree TREE1 = [&U] (((((((((((Cheirogaleus_major[&index=12,brlen_95%_HPD={0.05562,0.093134}]:0.074716,Microcebus_murinus[&index=16,brlen_95%_HPD={0.091327,0.136632}]:0.114375)[&index=24,posterior=1.0,brlen_95%_HPD={0.023189,0.054639},!hilight={2,0.02209799999999995,#ffcc66}]:0.037364,Lepilemur_hubbardorum[&index=8,brlen_95%_HPD={0.100809,0.148359}]:0.124048)[&index=25,posterior=0.819191,brlen_95%_HPD={0.013252,0.039105}]:0.025646,((Lemur_catta[&index=15,brlen_95%_HPD={0.062771,0.100661}]:0.082145,Varecia_variegata_variegata[&index=13,brlen_95%_HPD={0.080116,0.121727}]:0.10257)[&index=26,posterior=1.0,brlen_95%_HPD={0.0197,0.046287}]:0.032641,Propithecus_coquereli[&index=20,brlen_95%_HPD={0.068911,0.106979}]:0.086429)[&index=27,posterior=0.711239,brlen_95%_HPD={0.006149,0.028238},!hilight={3,0.047935000000000005,#ff6666}]:0.016337)[&index=28,posterior=1.0,brlen_95%_HPD={0.025317,0.054662}]:0.039783,Daubentonia_madagascariensis[&index=14,brlen_95%_HPD={0.102714,0.147351}]:0.123135)[&index=29,posterior=0.958685,brlen_95%_HPD={0.006448,0.02661}]:0.016667,(((Galago_senegalensis[&index=22,brlen_95%_HPD={0.054653,0.08894}]:0.072017,Otolemur_crassicaudatus[&index=7,brlen_95%_HPD={0.057006,0.090916}]:0.073806)[&index=30,posterior=1.0,brlen_95%_HPD={0.025664,0.052311}]:0.038067,Perodicticus_potto[&index=18,brlen_95%_HPD={0.073122,0.11099}]:0.091842)[&index=31,posterior=0.998667,brlen_95%_HPD={0.007403,0.026742}]:0.017315,(Loris_tardigradus[&index=9,brlen_95%_HPD={0.076658,0.116563}]:0.094749,Nycticebus_coucang[&index=4,brlen_95%_HPD={0.083851,0.125955}]:0.10507)[&index=32,posterior=1.0,brlen_95%_HPD={0.021168,0.047692}]:0.033576)[&index=33,posterior=1.0,brlen_95%_HPD={0.016961,0.043353},!hilight={5,0.08792699999999992,#85ff5c}]:0.02936)[&index=34,posterior=0.909818,brlen_95%_HPD={0.005463,0.023785}]:0.014339,Tarsius_syrichta[&index=23,brlen_95%_HPD={0.143855,0.198969}]:0.169335)[&index=35,posterior=0.984007,brlen_95%_HPD={0.006395,0.029075}]:0.017642,Galeopterus_variegatus[&index=10,brlen_95%_HPD={0.12626,0.180004}]:0.153099)[&index=36,posterior=1.0,brlen_95%_HPD={0.025046,0.053637}]:0.039742,(((Chlorocebus_aethiops[&index=21,brlen_95%_HPD={0.05583,0.089729}]:0.072749,Macaca_mulatta[&index=19,brlen_95%_HPD={0.066214,0.101099}]:0.082384)[&index=37,posterior=1.0,brlen_95%_HPD={0.011696,0.0338}]:0.022756,Colobus_guereza[&index=2,brlen_95%_HPD={0.091934,0.135264}]:0.113809)[&index=38,posterior=1.0,brlen_95%_HPD={0.028734,0.057533}]:0.042777,(Hylobates_lar[&index=11,brlen_95%_HPD={0.077682,0.118136}]:0.099444,Pan_paniscus[&index=5,brlen_95%_HPD={0.054747,0.088954}]:0.072651)[&index=39,posterior=1.0,brlen_95%_HPD={0.014076,0.037147}]:0.02505)[&index=40,posterior=1.0,brlen_95%_HPD={0.026911,0.0563},!hilight={5,0.05005300000000007,#66ccff}]:0.041533)[&index=41,posterior=1.0,brlen_95%_HPD={0.060387,0.100368},!rotate=false]:0.080775,Callicebus_donacophilus[&index=6,brlen_95%_HPD={0.079464,0.122067}]:0.099592)[&index=42,posterior=0.992448,brlen_95%_HPD={0.010655,0.03427}]:0.022103,Cebus_albifrons[&index=3,brlen_95%_HPD={0.077447,0.118568}]:0.097497)[&index=43,posterior=0.989782,brlen_95%_HPD={0.009402,0.035605}]:0.022293,Aotus_trivirgatus[&index=1,brlen_95%_HPD={0.071294,0.112551}]:0.091262,Saimiri_sciureus[&index=17,brlen_95%_HPD={0.099223,0.145937}]:0.123001)[&index=44,posterior=1.0];
+end;
+
+begin figtree;
+	set appearance.backgroundColorAttribute="Default";
+	set appearance.backgroundColour=#ffffff;
+	set appearance.branchColorAttribute="User selection";
+	set appearance.branchColorGradient=false;
+	set appearance.branchLineWidth=2.0;
+	set appearance.branchMinLineWidth=0.0;
+	set appearance.branchWidthAttribute="Fixed";
+	set appearance.foregroundColour=#000000;
+	set appearance.hilightingGradient=false;
+	set appearance.selectionColour=#2d3680;
+	set branchLabels.colorAttribute="User selection";
+	set branchLabels.displayAttribute="Branch times";
+	set branchLabels.fontName="sansserif";
+	set branchLabels.fontSize=8;
+	set branchLabels.fontStyle=0;
+	set branchLabels.isShown=false;
+	set branchLabels.significantDigits=4;
+	set layout.expansion=0;
+	set layout.layoutType="RECTILINEAR";
+	set layout.zoom=0;
+	set legend.attribute="index";
+	set legend.fontSize=10.0;
+	set legend.isShown=false;
+	set legend.significantDigits=4;
+	set nodeBars.barWidth=4.0;
+	set nodeBars.displayAttribute="brlen_95%_HPD";
+	set nodeBars.isShown=false;
+	set nodeLabels.colorAttribute="User selection";
+	set nodeLabels.displayAttribute="posterior";
+	set nodeLabels.fontName="sansserif";
+	set nodeLabels.fontSize=18;
+	set nodeLabels.fontStyle=0;
+	set nodeLabels.isShown=true;
+	set nodeLabels.significantDigits=2;
+	set nodeShapeExternal.colourAttribute="User selection";
+	set nodeShapeExternal.isShown=false;
+	set nodeShapeExternal.minSize=10.0;
+	set nodeShapeExternal.scaleType=Width;
+	set nodeShapeExternal.shapeType=Circle;
+	set nodeShapeExternal.size=4.0;
+	set nodeShapeExternal.sizeAttribute="Fixed";
+	set nodeShapeInternal.colourAttribute="User selection";
+	set nodeShapeInternal.isShown=false;
+	set nodeShapeInternal.minSize=10.0;
+	set nodeShapeInternal.scaleType=Width;
+	set nodeShapeInternal.shapeType=Circle;
+	set nodeShapeInternal.size=4.0;
+	set nodeShapeInternal.sizeAttribute="Fixed";
+	set polarLayout.alignTipLabels=false;
+	set polarLayout.angularRange=0;
+	set polarLayout.rootAngle=0;
+	set polarLayout.rootLength=100;
+	set polarLayout.showRoot=true;
+	set radialLayout.spread=0.0;
+	set rectilinearLayout.alignTipLabels=false;
+	set rectilinearLayout.curvature=0;
+	set rectilinearLayout.rootLength=100;
+	set scale.offsetAge=0.0;
+	set scale.rootAge=1.0;
+	set scale.scaleFactor=1.0;
+	set scale.scaleRoot=false;
+	set scaleAxis.automaticScale=true;
+	set scaleAxis.fontSize=8.0;
+	set scaleAxis.isShown=false;
+	set scaleAxis.lineWidth=1.0;
+	set scaleAxis.majorTicks=1.0;
+	set scaleAxis.minorTicks=0.5;
+	set scaleAxis.origin=0.0;
+	set scaleAxis.reverseAxis=false;
+	set scaleAxis.showGrid=true;
+	set scaleBar.automaticScale=true;
+	set scaleBar.fontSize=18.0;
+	set scaleBar.isShown=true;
+	set scaleBar.lineWidth=2.0;
+	set scaleBar.scaleRange=0.0;
+	set tipLabels.colorAttribute="User selection";
+	set tipLabels.displayAttribute="Names";
+	set tipLabels.fontName="sansserif";
+	set tipLabels.fontSize=18;
+	set tipLabels.fontStyle=0;
+	set tipLabels.isShown=true;
+	set tipLabels.significantDigits=4;
+	set trees.order=false;
+	set trees.orderType="increasing";
+	set trees.rooting=true;
+	set trees.rootingType="User Selection";
+	set trees.transform=false;
+	set trees.transformType="cladogram";
+end;
+

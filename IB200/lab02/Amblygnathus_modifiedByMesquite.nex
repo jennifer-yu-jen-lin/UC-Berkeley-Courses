@@ -1,0 +1,342 @@
+#NEXUS
+[written Wed Jan 29 16:14:23 PST 2020 by Mesquite  version 3.61 (build 927) at jenniferdeair-2.dyn.berkeley.edu/10.142.53.146]
+
+BEGIN TAXA;
+	TITLE Taxa;
+	DIMENSIONS NTAX=29;
+	TAXLABELS
+		'seriatoporus-g_change' 'ellipticus-g' 'amaroides-g' 'ruficollis-g' 'iripennis_change' mexicanus interior 'evansi_change' panamensis fricki woodruffi puncticollis tikal subtinctus whiteheadi 'g.gilvipes_change' g.peruanus xingu braziliensis suturalis geminatus darlingtoni bicolor 'corvinus_change' cephalotes gigas reichardti lucidus janthinus 
+	;
+
+END;
+
+
+BEGIN CHARACTERS;
+	TITLE  Character_Matrix;
+	DIMENSIONS  NCHAR=29;
+	FORMAT DATATYPE = STANDARD RESPECTCASE GAP = - MISSING = ? SYMBOLS = "  0 1 2 3 4 5 6 7 8 9 A B C";
+	CHARSTATELABELS 
+		1 m.l._vent._flange /  absent present,
+		2 elyt._micro. /  isodiametric transverse,
+		3 body_length /  '4.5-6.2mm' '6.3-7.0mm' '7.7-11.0mm' '>12.0mm',
+		4 pron._hind_ang. /  rounded subangulate angulate,
+		5 #_int_sac_spines /  none one two numerous,
+		6 spine_size /  absent small medium large,
+		7 'spine loc''n' /  absent scattered 'ventro-med' 'ventro-bas',
+		8 prostern._process /  not ridged,
+		9 head_micros. /  isodiam 'iso-transv' transv,
+		10 elytral_vest. /  '7-9_+_ap1-6' '8-9_+_ap1-7' '9_+_ap1-8' '8-9' 9th 'ap_1-8' none,
+		11 'head + pron color' /  black rufous metal. 'bl_+_flavous',
+		12 clypeal_margin /  ±_straight concave,
+		13 left_mand._apex /  normal broad,
+		14 spermatheca /  short_curve long_coil,
+		15 male_lamina_width /  broad narrow,
+		16 lamina_length /  long moderate short absent,
+		17 lam._apex_dir. /  straight right dorsal,
+		18 apex_shape /  pointed blunt,
+		19 m.l._apex_form /  v._short mod_straight long sinuate,
+		20 m.l._flange_bilo /  not bilobed,
+		21 dorsal_flange /  absent v._small small large,
+		22 female_terg.8_setae /  absent present,
+		23 sac_microtrich. /  normal enlarged,
+		24 leg_color /  flavous black,
+		25 'm.l. vent.-sculp.' /  smooth serrate,
+		26 elytral_color /  black metallic bicolored,
+		27 'm.l. vent.-form' /  tapered spatulate,
+		28 pron._base /  constrict. moderate broadened,
+		29 'New_character' /  A B C ; 
+	MATRIX
+	'seriatoporus-g_change'10103310030000011010200000010
+	'ellipticus-g'         10010001020000001010200000010
+	'amaroides-g'          11010001150000001010200000010
+	'ruficollis-g'         01023110061000001010200000010
+	'iripennis_change'     01011320100111001010200000011
+	mexicanus              01002220100111001020300000012
+	interior               01002220100111001020110000010
+	'evansi_change'        01002220130111011010110000012
+	panamensis             01012220100111000010110000011
+	fricki                 010122201001110020101?0000012
+	woodruffi              01012220200111011010110000011
+	puncticollis           01002220200111011010110000011
+	tikal                  01022120120111020110210000011
+	subtinctus             01022220100111020110110000011
+	whiteheadi             01022120120111?3??1?010000011
+	'g.gilvipes_change'    01011120100111?3??10211000011
+	g.peruanus             01011120100111?3??10211000012
+	xingu                  110111201601111201012?1000012
+	braziliensis           11011130160111120110201010012
+	suturalis              11111120213111120110201012012
+	geminatus              01011120100111120110211000012
+	darlingtoni            01011120100111120?00111000112
+	bicolor                01022120101111120?00111000112
+	'corvinus_change'      01211120140101100120200110020
+	cephalotes             11210000100101100130210100010
+	gigas                  11310000100101100130210100010
+	reichardti             11210000242101100120210101010
+	lucidus                11210000242101100120210101010
+	janthinus              11210000262101100120210001000
+
+;
+
+END;
+BEGIN ASSUMPTIONS;
+	OPTIONS DEFTYPE = unord PolyTcount = MINSTEPS;
+	TYPESET * UNTITLED   =  unord:  7 11 26-29\3, ord:  1- 6 8- 10 12- 25 27- 28;
+
+END;
+
+BEGIN TREES;
+	Title 'Trees from "Amblygnathus_ori.nex"';
+	ID 016ff3c0a8d62;
+	LINK Taxa = Taxa;
+	TRANSLATE
+[0] 		1 'seriatoporus-g_change',
+[1] 		2 'ellipticus-g',
+[2] 		3 'amaroides-g',
+[3] 		4 'ruficollis-g',
+[4] 		5 'iripennis_change',
+[5] 		6 mexicanus,
+[6] 		7 interior,
+[7] 		8 'evansi_change',
+[8] 		9 panamensis,
+[9] 		10 fricki,
+[10] 		11 woodruffi,
+[11] 		12 puncticollis,
+[12] 		13 tikal,
+[13] 		14 subtinctus,
+[14] 		15 whiteheadi,
+[15] 		16 'g.gilvipes_change',
+[16] 		17 g.peruanus,
+[17] 		18 xingu,
+[18] 		19 braziliensis,
+[19] 		20 suturalis,
+[20] 		21 geminatus,
+[21] 		22 darlingtoni,
+[22] 		23 bicolor,
+[23] 		24 'corvinus_change',
+[24] 		25 cephalotes,
+[25] 		26 gigas,
+[26] 		27 reichardti,
+[27] 		28 lucidus,
+[28] 		29 janthinus;
+	TREE PAUP_1 = (1,(((2,3),(((((((((((5,6),7),(8,(11,12))),10),9),((13,15),14)),(22,23)),(16,17),21),20),(18,19)),(24,((25,26),(27,28,29))))),4));
+	TREE PAUP_2 = (1,(((2,3),((((((((((((5,6),7),(8,(11,12))),10),9),14),(13,15)),(22,23)),(16,17),21),20),(18,19)),(24,((25,26),(27,28,29))))),4));
+	TREE PAUP_3 = (1,(((2,3),(((((((((((((5,6),7),(8,(11,12))),10),9),14),(13,15)),23),22),(16,17),21),20),(18,19)),(24,((25,26),(27,28,29))))),4));
+	TREE PAUP_4 = (1,(((2,3),((((((((((5,6),(7,(8,(11,12)))),10),9),((13,15),14)),(22,23)),(16,17),21),20),(18,19)),(24,((25,26),(27,28,29))))),4));
+	TREE PAUP_5 = (1,(((2,3),((((((((((5,6),7,(8,(11,12))),10),9),((13,15),14)),(22,23)),(16,17),21),20),(18,19)),(24,((25,26),(27,28,29))))),4));
+	TREE PAUP_6 = (1,(((2,3),(((((((((5,6),(7,(8,(11,12))),10),9),((13,15),14)),(22,23)),(16,17),21),20),(18,19)),(24,((25,26),(27,28,29))))),4));
+	TREE PAUP_7 = (1,(((2,3),((((((((((5,6),10),(7,(8,(11,12)))),9),((13,15),14)),(22,23)),(16,17),21),20),(18,19)),(24,((25,26),(27,28,29))))),4));
+	TREE PAUP_8 = (1,(((2,3),((((((((5,((6,7),(8,(11,12))),10),9),((13,15),14)),(22,23)),(16,17),21),20),(18,19)),(24,((25,26),(27,28,29))))),4));
+	TREE PAUP_9 = (1,(((2,3),(((((((((5,10),((6,7),(8,(11,12)))),9),((13,15),14)),(22,23)),(16,17),21),20),(18,19)),(24,((25,26),(27,28,29))))),4));
+	TREE PAUP_10 = (1,(((2,3),(((((((((((5,6),(7,(8,(11,12)))),10),9),14),(13,15)),(22,23)),(16,17),21),20),(18,19)),(24,((25,26),(27,28,29))))),4));
+	TREE PAUP_11 = (1,(((2,3),(((((((((((5,6),7,(8,(11,12))),10),9),14),(13,15)),(22,23)),(16,17),21),20),(18,19)),(24,((25,26),(27,28,29))))),4));
+	TREE PAUP_12 = (1,(((2,3),((((((((((5,6),(7,(8,(11,12))),10),9),14),(13,15)),(22,23)),(16,17),21),20),(18,19)),(24,((25,26),(27,28,29))))),4));
+	TREE PAUP_13 = (1,(((2,3),(((((((((((5,6),10),(7,(8,(11,12)))),9),14),(13,15)),(22,23)),(16,17),21),20),(18,19)),(24,((25,26),(27,28,29))))),4));
+	TREE PAUP_14 = (1,(((2,3),(((((((((5,((6,7),(8,(11,12))),10),9),14),(13,15)),(22,23)),(16,17),21),20),(18,19)),(24,((25,26),(27,28,29))))),4));
+	TREE PAUP_15 = (1,(((2,3),((((((((((5,10),((6,7),(8,(11,12)))),9),14),(13,15)),(22,23)),(16,17),21),20),(18,19)),(24,((25,26),(27,28,29))))),4));
+	TREE PAUP_16 = (1,(((2,3),((((((((((((5,6),(7,(8,(11,12)))),10),9),14),(13,15)),23),22),(16,17),21),20),(18,19)),(24,((25,26),(27,28,29))))),4));
+	TREE PAUP_17 = (1,(((2,3),((((((((((((5,6),7,(8,(11,12))),10),9),14),(13,15)),23),22),(16,17),21),20),(18,19)),(24,((25,26),(27,28,29))))),4));
+	TREE PAUP_18 = (1,(((2,3),(((((((((((5,6),(7,(8,(11,12))),10),9),14),(13,15)),23),22),(16,17),21),20),(18,19)),(24,((25,26),(27,28,29))))),4));
+	TREE PAUP_19 = (1,(((2,3),((((((((((((5,6),10),(7,(8,(11,12)))),9),14),(13,15)),23),22),(16,17),21),20),(18,19)),(24,((25,26),(27,28,29))))),4));
+	TREE PAUP_20 = (1,(((2,3),((((((((((5,((6,7),(8,(11,12))),10),9),14),(13,15)),23),22),(16,17),21),20),(18,19)),(24,((25,26),(27,28,29))))),4));
+	TREE PAUP_21 = (1,(((2,3),(((((((((((5,10),((6,7),(8,(11,12)))),9),14),(13,15)),23),22),(16,17),21),20),(18,19)),(24,((25,26),(27,28,29))))),4));
+
+END;
+
+
+BEGIN MESQUITECHARMODELS;
+	ProbModelSet * UNTITLED   =  'Mk1 (est.)':  1- 29;
+END;
+
+Begin MESQUITE;
+		MESQUITESCRIPTVERSION 2;
+		TITLE AUTO;
+		tell ProjectCoordinator;
+		timeSaved 1580343263757;
+		getEmployee #mesquite.minimal.ManageTaxa.ManageTaxa;
+		tell It;
+			setID 0 7637208362204372385;
+		endTell;
+		getEmployee #mesquite.charMatrices.ManageCharacters.ManageCharacters;
+		tell It;
+			setID 0 3371525317305796929;
+			mqVersion 361;
+			checksumv 0 3 2450143738 null  getNumChars 29 numChars 29 getNumTaxa 29 numTaxa 29   short false   bits 127   states 127   sumSquaresStatesOnly 22463.0 sumSquares 22463.0 longCompressibleToShort true usingShortMatrix false   NumFiles 1 NumMatrices 1 errorReportedDuringRun;
+			mqVersion;
+		endTell;
+		getWindow;
+		tell It;
+			suppress;
+			setResourcesState false false 100;
+			setPopoutState 300;
+			setExplanationSize 0;
+			setAnnotationSize 0;
+			setFontIncAnnot 0;
+			setFontIncExp 0;
+			setSize 1167 697;
+			setLocation 50 43;
+			setFont SanSerif;
+			setFontSize 10;
+			getToolPalette;
+			tell It;
+			endTell;
+			desuppress;
+		endTell;
+		getEmployee  #mesquite.minimal.ManageTaxa.ManageTaxa;
+		tell It;
+			showTaxa #7637208362204372385 #mesquite.lists.TaxonList.TaxonList;
+			tell It;
+				setTaxa #7637208362204372385;
+				getWindow;
+				tell It;
+					useTargetValue off;
+					setTargetValue ;
+					newAssistant  #mesquite.lists.TaxonListCurrPartition.TaxonListCurrPartition;
+					setExplanationSize 30;
+					setAnnotationSize 20;
+					setFontIncAnnot 0;
+					setFontIncExp 0;
+					setSize 1067 625;
+					setLocation 50 43;
+					setFont SanSerif;
+					setFontSize 10;
+					getToolPalette;
+					tell It;
+						setTool mesquite.lists.TaxonList.TaxonListWindow.ibeam;
+					endTell;
+				endTell;
+				showWindow;
+				getEmployee #mesquite.lists.ColorTaxon.ColorTaxon;
+				tell It;
+					setColor Red;
+					removeColor off;
+				endTell;
+				getEmployee #mesquite.lists.TaxonListAnnotPanel.TaxonListAnnotPanel;
+				tell It;
+					togglePanel off;
+				endTell;
+			endTell;
+		endTell;
+		getEmployee  #mesquite.charMatrices.BasicDataWindowCoord.BasicDataWindowCoord;
+		tell It;
+			showDataWindow #3371525317305796929 #mesquite.charMatrices.BasicDataWindowMaker.BasicDataWindowMaker;
+			tell It;
+				getWindow;
+				tell It;
+					setExplanationSize 30;
+					setAnnotationSize 20;
+					setFontIncAnnot 0;
+					setFontIncExp 0;
+					setSize 1067 625;
+					setLocation 50 43;
+					setFont SanSerif;
+					setFontSize 10;
+					getToolPalette;
+					tell It;
+						setTool mesquite.charMatrices.BasicDataWindowMaker.BasicDataWindow.ibeam;
+					endTell;
+					setActive;
+					setTool mesquite.charMatrices.BasicDataWindowMaker.BasicDataWindow.ibeam;
+					colorCells  #mesquite.charMatrices.ColorByState.ColorByState;
+				tell It;
+					setStateLimit 9;
+					toggleUniformMaximum on;
+				endTell;
+					colorRowNames  #mesquite.charMatrices.TaxonGroupColor.TaxonGroupColor;
+					colorColumnNames  #mesquite.charMatrices.CharGroupColor.CharGroupColor;
+					colorText  #mesquite.charMatrices.NoColor.NoColor;
+					setBackground White;
+					toggleShowNames on;
+					toggleShowTaxonNames on;
+					toggleTight off;
+					toggleThinRows off;
+					toggleShowChanges on;
+					toggleSeparateLines off;
+					toggleShowStates on;
+					toggleReduceCellBorders off;
+					toggleAutoWCharNames on;
+					toggleAutoTaxonNames off;
+					toggleShowDefaultCharNames off;
+					toggleConstrainCW on;
+					toggleBirdsEye off;
+					toggleShowPaleGrid off;
+					toggleShowPaleCellColors off;
+					toggleShowPaleExcluded off;
+					togglePaleInapplicable on;
+					togglePaleMissing off;
+					toggleShowBoldCellText off;
+					toggleAllowAutosize on;
+					toggleColorsPanel off;
+					toggleDiagonal on;
+					setDiagonalHeight 80;
+					toggleLinkedScrolling on;
+					toggleScrollLinkedTables off;
+				endTell;
+				showWindow;
+				getWindow;
+				tell It;
+					forceAutosize;
+				endTell;
+				getEmployee #mesquite.charMatrices.AlterData.AlterData;
+				tell It;
+					toggleBySubmenus off;
+				endTell;
+				getEmployee #mesquite.charMatrices.ColorCells.ColorCells;
+				tell It;
+					setColor Red;
+					removeColor off;
+				endTell;
+				getEmployee #mesquite.categ.StateNamesEditor.StateNamesEditor;
+				tell It;
+					makeWindow;
+					tell It;
+						setExplanationSize 30;
+						setAnnotationSize 20;
+						setFontIncAnnot 0;
+						setFontIncExp 0;
+						setSize 1067 625;
+						setLocation 50 43;
+						setFont SanSerif;
+						setFontSize 10;
+						getToolPalette;
+						tell It;
+							setTool mesquite.categ.StateNamesEditor.StateNamesWindow.ibeam;
+						endTell;
+						rowsAreCharacters on;
+						toggleConstrainChar on;
+						toggleConstrainCharNum 3;
+						togglePanel off;
+						toggleSummaryPanel off;
+					endTell;
+					showWindow;
+				endTell;
+				getEmployee #mesquite.categ.StateNamesStrip.StateNamesStrip;
+				tell It;
+					showStrip off;
+				endTell;
+				getEmployee #mesquite.charMatrices.AnnotPanel.AnnotPanel;
+				tell It;
+					togglePanel off;
+				endTell;
+				getEmployee #mesquite.charMatrices.CharReferenceStrip.CharReferenceStrip;
+				tell It;
+					showStrip off;
+				endTell;
+				getEmployee #mesquite.charMatrices.QuickKeySelector.QuickKeySelector;
+				tell It;
+					autotabOff;
+				endTell;
+				getEmployee #mesquite.charMatrices.SelSummaryStrip.SelSummaryStrip;
+				tell It;
+					showStrip off;
+				endTell;
+				getEmployee #mesquite.categ.SmallStateNamesEditor.SmallStateNamesEditor;
+				tell It;
+					panelOpen true;
+				endTell;
+			endTell;
+		endTell;
+		endTell;
+end;
+
+

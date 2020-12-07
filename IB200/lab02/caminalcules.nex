@@ -1,0 +1,499 @@
+#NEXUS
+[written Wed Jan 29 16:38:43 PST 2020 by Mesquite  version 3.61 (build 927) at jenniferdeair-2.dyn.berkeley.edu/10.142.53.146]
+
+BEGIN TAXA;
+	TITLE Taxa;
+	DIMENSIONS NTAX=14;
+	TAXLABELS
+		'caminalcule_1' 'caminalcule_2' 'caminalcule_3' 'caminalcule_4' 'caminalcule_9' 'caminalcule_12' 'caminalcule_13' 'caminalcule_14' 'caminalcule_16' 'caminalcule_19' 'caminalcule_20' 'caminalcule_22' 'caminalcule_24' 'caminalcule_28' 
+	;
+
+END;
+
+
+BEGIN CHARACTERS;
+	TITLE  Character_Matrix;
+	DIMENSIONS  NCHAR=10;
+	FORMAT DATATYPE = STANDARD RESPECTCASE GAP = - MISSING = ? SYMBOLS = "  0 1 2 3";
+	CHARSTATELABELS 
+		1 body_length /  short long,
+		2 body_shape /  not_globular globular,
+		3 eyes /  no yes,
+		4 neck /  no yes,
+		5 joint_of_1st_arms /  no yes,
+		6 toes_of_1st_arms /  no yes,
+		7 number_of_last_apeendage / ,
+		8 first_mark_on_body /  none '2 dark dots, 1 empty dot' '1 bar, 1 empty dot' '1 solid square, 1 empty dot',
+		9 shell /  no yes,
+		10 length_of_1st_arms /  short medium long ; 
+	MATRIX
+	'caminalcule_1' 0101?01112
+	'caminalcule_2' 0011?12211
+	'caminalcule_3' 0010?12211
+	'caminalcule_4' 0010?12211
+	'caminalcule_9' 0011?01011
+	'caminalcule_12'0011?12211
+	'caminalcule_13'0001?01010
+	'caminalcule_14'0001?01010
+	'caminalcule_16'0101?01112
+	'caminalcule_19'1001?00011
+	'caminalcule_20'1001?00001
+	'caminalcule_22'0011?12111
+	'caminalcule_24'0111?01312
+	'caminalcule_28'0001?01010
+
+;
+
+END;
+BEGIN ASSUMPTIONS;
+	TYPESET * UNTITLED   =  unord:  1- 10;
+
+END;
+
+BEGIN MESQUITECHARMODELS;
+	ProbModelSet * UNTITLED   =  'Mk1 (est.)':  1- 10;
+END;
+
+BEGIN TREES[!'Parameters: Tree search criterion: minimize Tree value using character matrix'];
+	Title 'Trees from Mesquite''s heuristic search';
+	ID 016ff3e125fe5;
+	LINK Taxa = Taxa;
+	TRANSLATE
+[0] 		1 'caminalcule_1',
+[1] 		2 'caminalcule_2',
+[2] 		3 'caminalcule_3',
+[3] 		4 'caminalcule_4',
+[4] 		5 'caminalcule_9',
+[5] 		6 'caminalcule_12',
+[6] 		7 'caminalcule_13',
+[7] 		8 'caminalcule_14',
+[8] 		9 'caminalcule_16',
+[9] 		10 'caminalcule_19',
+[10] 		11 'caminalcule_20',
+[11] 		12 'caminalcule_22',
+[12] 		13 'caminalcule_24',
+[13] 		14 'caminalcule_28';
+	TREE 'Tree 1 from search (criterion: minimize Tree value using character matrix)' = (((((((((((1,13),9),8),(14,7)),(11,10)),5),2),12),6),4),3);
+	TREE 'Tree 2 from search (criterion: minimize Tree value using character matrix)' = ((4,3),(((((((((1,13),9),8),(14,7)),(11,10)),5),2),12),6))[% ] [% ] [%  setBetweenBits = selected ];
+	TREE 'Tree 3 from search (criterion: minimize Tree value using character matrix)' = (4,((((((((((1,13),9),8),(14,7)),(11,10)),5),2),12),6),3))[% ] [% ] [%  setBetweenBits = selected ];
+	TREE 'Tree 4 from search (criterion: minimize Tree value using character matrix)' = ((((12,6),(((((((1,13),9),8),(14,7)),(11,10)),5),2)),4),3)[% ] [% ] [%  setBetweenBits = selected ];
+	TREE 'Tree 5 from search (criterion: minimize Tree value using character matrix)' = (((12,((((((((1,13),9),8),(14,7)),(11,10)),5),2),6)),4),3)[% ] [% ] [%  setBetweenBits = selected ];
+	TREE 'Tree 6 from search (criterion: minimize Tree value using character matrix)' = (((((2,12),6),((((((1,13),9),8),(14,7)),(11,10)),5)),4),3)[% ] [% ] [%  setBetweenBits = selected ];
+	TREE 'Tree 7 from search (criterion: minimize Tree value using character matrix)' = (((((2,12),((((((1,13),9),8),(14,7)),(11,10)),5)),6),4),3)[% ] [% ] [%  setBetweenBits = selected ];
+	TREE 'Tree 8 from search (criterion: minimize Tree value using character matrix)' = ((((2,(((((((1,13),9),8),(14,7)),(11,10)),5),12)),6),4),3)[% ] [% ] [%  setBetweenBits = selected ];
+	TREE 'Tree 9 from search (criterion: minimize Tree value using character matrix)' = ((((2,12),(((((((1,13),9),8),(14,7)),(11,10)),5),6)),4),3)[% ] [% ] [%  setBetweenBits = selected ];
+	TREE 'Tree 10 from search (criterion: minimize Tree value using character matrix)' = (((((((((14,(((1,13),9),8)),7),(11,10)),5),2),12),6),4),3)[% ] [% ] [%  setBetweenBits = selected ];
+	TREE 'Tree 11 from search (criterion: minimize Tree value using character matrix)' = ((((((((14,((((1,13),9),8),7)),(11,10)),5),2),12),6),4),3)[% ] [% ] [%  setBetweenBits = selected ];
+	TREE 'Tree 12 from search (criterion: minimize Tree value using character matrix)' = (((((((((8,(14,7)),(11,10)),((1,13),9)),5),2),12),6),4),3)[% ] [% ] [%  setBetweenBits = selected ];
+	TREE 'Tree 13 from search (criterion: minimize Tree value using character matrix)' = (((((((((8,(14,7)),((1,13),9)),(11,10)),5),2),12),6),4),3)[% ] [% ] [%  setBetweenBits = selected ];
+	TREE 'Tree 14 from search (criterion: minimize Tree value using character matrix)' = ((((((((8,(((1,13),9),(14,7))),(11,10)),5),2),12),6),4),3)[% ] [% ] [%  setBetweenBits = selected ];
+	TREE 'Tree 15 from search (criterion: minimize Tree value using character matrix)' = ((((((((8,((14,((1,13),9)),7)),(11,10)),5),2),12),6),4),3)[% ] [% ] [%  setBetweenBits = selected ];
+	TREE 'Tree 16 from search (criterion: minimize Tree value using character matrix)' = ((((((((8,(14,(((1,13),9),7))),(11,10)),5),2),12),6),4),3)[% ] [% ] [%  setBetweenBits = selected ];
+	TREE 'Tree 17 from search (criterion: minimize Tree value using character matrix)' = ((((((((8,(14,7)),(((1,13),9),(11,10))),5),2),12),6),4),3)[% ] [% ] [%  setBetweenBits = selected ];
+	TREE 'Tree 18 from search (criterion: minimize Tree value using character matrix)' = (((((((((((13,9),1),8),(14,7)),(11,10)),5),2),12),6),4),3)[% ] [% ] [%  setBetweenBits = selected ];
+	TREE 'Tree 19 from search (criterion: minimize Tree value using character matrix)' = ((((((((((13,(1,9)),8),(14,7)),(11,10)),5),2),12),6),4),3)[% ] [% ] [%  setBetweenBits = selected ];
+	TREE 'Tree 20 from search (criterion: minimize Tree value using character matrix)' = ((((((((((1,13),9),((14,8),7)),(11,10)),5),2),12),6),4),3)[% ] [% ] [%  setBetweenBits = selected ];
+	TREE 'Tree 21 from search (criterion: minimize Tree value using character matrix)' = ((((((((((1,13),9),(14,(8,7))),(11,10)),5),2),12),6),4),3)[% ] [% ] [%  setBetweenBits = selected ];
+	TREE 'Tree 22 from search (criterion: minimize Tree value using character matrix)' = ((((((((((((1,13),9),14),8),7),(11,10)),5),2),12),6),4),3)[% ] [% ] [%  setBetweenBits = selected ];
+	TREE 'Tree 23 from search (criterion: minimize Tree value using character matrix)' = (((((((((((1,13),9),(14,8)),7),(11,10)),5),2),12),6),4),3)[% ] [% ] [%  setBetweenBits = selected ];
+	TREE 'Tree 24 from search (criterion: minimize Tree value using character matrix)' = ((((((((((((1,13),9),7),8),14),(11,10)),5),2),12),6),4),3)[% ] [% ] [%  setBetweenBits = selected ];
+	TREE 'Tree 25 from search (criterion: minimize Tree value using character matrix)' = (((((((((((1,13),9),(7,8)),14),(11,10)),5),2),12),6),4),3)[% ] [% ] [%  setBetweenBits = selected ];
+	TREE 'Tree 26 from search (criterion: minimize Tree value using character matrix)' = (((((((((((1,13),9),8),(14,7)),(11,10)),5),12),6),2),4),3)[% ] [% ] [%  setBetweenBits = selected ];
+	TREE 'Tree 27 from search (criterion: minimize Tree value using character matrix)' = ((((((((((1,13),9),8),(14,7)),(11,10)),5),12),(2,6)),4),3)[% ] [% ] [%  setBetweenBits = selected ];
+	TREE 'Tree 28 from search (criterion: minimize Tree value using character matrix)' = (((((((((((1,13),9),8),(14,7)),(11,10)),5),6),2),12),4),3)[% ] [% ] [%  setBetweenBits = selected ];
+	TREE 'Tree 29 from search (criterion: minimize Tree value using character matrix)' = ((((((((((1,13),9),8),(14,7)),(11,10)),5),(6,2)),12),4),3)[% ] [% ] [%  setBetweenBits = selected ];
+	TREE 'Tree 30 from search (criterion: minimize Tree value using character matrix)' = ((((((((((1,13),9),8),(14,7)),(11,10)),5),2),12),(4,3)),6)[% ] [% ] [%  setBetweenBits = selected ];
+	TREE 'Tree 31 from search (criterion: minimize Tree value using character matrix)' = ((((((((((1,13),9),8),(14,7)),(11,10)),5),2),(4,3)),12),6)[% ] [% ] [%  setBetweenBits = selected ];
+	TREE 'Tree 32 from search (criterion: minimize Tree value using character matrix)' = ((((((((((1,13),9),8),(14,7)),(11,10)),5),(4,3)),2),12),6)[% ] [% ] [%  setBetweenBits = selected ];
+	TREE 'Tree 33 from search (criterion: minimize Tree value using character matrix)' = (((((((((1,13),9),8),(14,7)),(11,10)),5),((4,3),2)),12),6)[% ] [% ] [%  setBetweenBits = selected ];
+	TREE 'Tree 34 from search (criterion: minimize Tree value using character matrix)' = (((((((((1,13),9),8),(14,7)),(11,10)),5),2),((4,3),12)),6)[% ] [% ] [%  setBetweenBits = selected ];
+	TREE 'Tree 35 from search (criterion: minimize Tree value using character matrix)' = (((((((((1,13),9),8),(14,7)),(11,10)),5),2),12),((4,3),6))[% ] [% ] [%  setBetweenBits = selected ];
+	TREE 'Tree 36 from search (criterion: minimize Tree value using character matrix)' = (((4,3),(12,6)),(((((((1,13),9),8),(14,7)),(11,10)),5),2))[% ] [% ] [%  setBetweenBits = selected ];
+	TREE 'Tree 37 from search (criterion: minimize Tree value using character matrix)' = (((4,3),(((((((1,13),9),8),(14,7)),(11,10)),5),2)),(12,6))[% ] [% ] [%  setBetweenBits = selected ];
+	TREE 'Tree 38 from search (criterion: minimize Tree value using character matrix)' = ((4,3),((((((((1,13),9),8),(14,7)),(11,10)),5),2),(12,6)))[% ] [% ] [%  setBetweenBits = selected ];
+	TREE 'Tree 39 from search (criterion: minimize Tree value using character matrix)' = ((4,3),(12,((((((((1,13),9),8),(14,7)),(11,10)),5),2),6)))[% ] [% ] [%  setBetweenBits = selected ];
+	TREE 'Tree 40 from search (criterion: minimize Tree value using character matrix)' = (((4,3),((2,12),6)),((((((1,13),9),8),(14,7)),(11,10)),5))[% ] [% ] [%  setBetweenBits = selected ];
+	TREE 'Tree 41 from search (criterion: minimize Tree value using character matrix)' = (((4,3),((((((1,13),9),8),(14,7)),(11,10)),5)),((2,12),6))[% ] [% ] [%  setBetweenBits = selected ];
+	TREE 'Tree 42 from search (criterion: minimize Tree value using character matrix)' = ((4,3),(((((((1,13),9),8),(14,7)),(11,10)),5),((2,12),6)))[% ] [% ] [%  setBetweenBits = selected ];
+	TREE 'Tree 43 from search (criterion: minimize Tree value using character matrix)' = ((4,3),(((2,12),((((((1,13),9),8),(14,7)),(11,10)),5)),6))[% ] [% ] [%  setBetweenBits = selected ];
+	TREE 'Tree 44 from search (criterion: minimize Tree value using character matrix)' = ((4,3),((2,(((((((1,13),9),8),(14,7)),(11,10)),5),12)),6))[% ] [% ] [%  setBetweenBits = selected ];
+	TREE 'Tree 45 from search (criterion: minimize Tree value using character matrix)' = ((4,3),((2,12),(((((((1,13),9),8),(14,7)),(11,10)),5),6)))[% ] [% ] [%  setBetweenBits = selected ];
+	TREE 'Tree 46 from search (criterion: minimize Tree value using character matrix)' = ((4,3),(((((((14,(((1,13),9),8)),7),(11,10)),5),2),12),6))[% ] [% ] [%  setBetweenBits = selected ];
+	TREE 'Tree 47 from search (criterion: minimize Tree value using character matrix)' = ((4,3),((((((14,((((1,13),9),8),7)),(11,10)),5),2),12),6))[% ] [% ] [%  setBetweenBits = selected ];
+	TREE 'Tree 48 from search (criterion: minimize Tree value using character matrix)' = ((4,3),(((((((8,(14,7)),(11,10)),((1,13),9)),5),2),12),6))[% ] [% ] [%  setBetweenBits = selected ];
+	TREE 'Tree 49 from search (criterion: minimize Tree value using character matrix)' = ((4,3),(((((((8,(14,7)),((1,13),9)),(11,10)),5),2),12),6))[% ] [% ] [%  setBetweenBits = selected ];
+	TREE 'Tree 50 from search (criterion: minimize Tree value using character matrix)' = ((4,3),((((((8,(((1,13),9),(14,7))),(11,10)),5),2),12),6))[% ] [% ] [%  setBetweenBits = selected ];
+	TREE 'Tree 51 from search (criterion: minimize Tree value using character matrix)' = ((4,3),((((((8,((14,((1,13),9)),7)),(11,10)),5),2),12),6))[% ] [% ] [%  setBetweenBits = selected ];
+	TREE 'Tree 52 from search (criterion: minimize Tree value using character matrix)' = ((4,3),((((((8,(14,(((1,13),9),7))),(11,10)),5),2),12),6))[% ] [% ] [%  setBetweenBits = selected ];
+	TREE 'Tree 53 from search (criterion: minimize Tree value using character matrix)' = ((4,3),((((((8,(14,7)),(((1,13),9),(11,10))),5),2),12),6))[% ] [% ] [%  setBetweenBits = selected ];
+	TREE 'Tree 54 from search (criterion: minimize Tree value using character matrix)' = ((4,3),(((((((((13,9),1),8),(14,7)),(11,10)),5),2),12),6))[% ] [% ] [%  setBetweenBits = selected ];
+	TREE 'Tree 55 from search (criterion: minimize Tree value using character matrix)' = ((4,3),((((((((13,(1,9)),8),(14,7)),(11,10)),5),2),12),6))[% ] [% ] [%  setBetweenBits = selected ];
+	TREE 'Tree 56 from search (criterion: minimize Tree value using character matrix)' = ((4,3),((((((((1,13),9),((14,8),7)),(11,10)),5),2),12),6))[% ] [% ] [%  setBetweenBits = selected ];
+	TREE 'Tree 57 from search (criterion: minimize Tree value using character matrix)' = ((4,3),((((((((1,13),9),(14,(8,7))),(11,10)),5),2),12),6))[% ] [% ] [%  setBetweenBits = selected ];
+	TREE 'Tree 58 from search (criterion: minimize Tree value using character matrix)' = ((4,3),((((((((((1,13),9),14),8),7),(11,10)),5),2),12),6))[% ] [% ] [%  setBetweenBits = selected ];
+	TREE 'Tree 59 from search (criterion: minimize Tree value using character matrix)' = ((4,3),(((((((((1,13),9),(14,8)),7),(11,10)),5),2),12),6))[% ] [% ] [%  setBetweenBits = selected ];
+	TREE 'Tree 60 from search (criterion: minimize Tree value using character matrix)' = ((4,3),((((((((((1,13),9),7),8),14),(11,10)),5),2),12),6))[% ] [% ] [%  setBetweenBits = selected ];
+	TREE 'Tree 61 from search (criterion: minimize Tree value using character matrix)' = ((4,3),(((((((((1,13),9),(7,8)),14),(11,10)),5),2),12),6))[% ] [% ] [%  setBetweenBits = selected ];
+	TREE 'Tree 62 from search (criterion: minimize Tree value using character matrix)' = (((4,3),((((((((1,13),9),8),(14,7)),(11,10)),5),12),6)),2)[% ] [% ] [%  setBetweenBits = selected ];
+	TREE 'Tree 63 from search (criterion: minimize Tree value using character matrix)' = (((4,3),2),((((((((1,13),9),8),(14,7)),(11,10)),5),12),6))[% ] [% ] [%  setBetweenBits = selected ];
+	TREE 'Tree 64 from search (criterion: minimize Tree value using character matrix)' = ((4,3),(2,((((((((1,13),9),8),(14,7)),(11,10)),5),12),6)))[% ] [% ] [%  setBetweenBits = selected ];
+	TREE 'Tree 65 from search (criterion: minimize Tree value using character matrix)' = ((4,3),((((((((1,13),9),8),(14,7)),(11,10)),5),12),(2,6)))[% ] [% ] [%  setBetweenBits = selected ];
+	TREE 'Tree 66 from search (criterion: minimize Tree value using character matrix)' = (((4,3),((((((((1,13),9),8),(14,7)),(11,10)),5),2),6)),12)[% ] [% ] [%  setBetweenBits = selected ];
+	TREE 'Tree 67 from search (criterion: minimize Tree value using character matrix)' = (((4,3),12),((((((((1,13),9),8),(14,7)),(11,10)),5),2),6))[% ] [% ] [%  setBetweenBits = selected ];
+	TREE 'Tree 68 from search (criterion: minimize Tree value using character matrix)' = ((4,3),(((((((((1,13),9),8),(14,7)),(11,10)),5),6),2),12))[% ] [% ] [%  setBetweenBits = selected ];
+	TREE 'Tree 69 from search (criterion: minimize Tree value using character matrix)' = ((4,3),((((((((1,13),9),8),(14,7)),(11,10)),5),(6,2)),12))[% ] [% ] [%  setBetweenBits = selected ];
+	TREE 'Tree 70 from search (criterion: minimize Tree value using character matrix)' = (4,(((12,6),(((((((1,13),9),8),(14,7)),(11,10)),5),2)),3))[% ] [% ] [%  setBetweenBits = selected ];
+	TREE 'Tree 71 from search (criterion: minimize Tree value using character matrix)' = (4,((12,((((((((1,13),9),8),(14,7)),(11,10)),5),2),6)),3))[% ] [% ] [%  setBetweenBits = selected ];
+	TREE 'Tree 72 from search (criterion: minimize Tree value using character matrix)' = (4,((((2,12),6),((((((1,13),9),8),(14,7)),(11,10)),5)),3))[% ] [% ] [%  setBetweenBits = selected ];
+	TREE 'Tree 73 from search (criterion: minimize Tree value using character matrix)' = (4,((((2,12),((((((1,13),9),8),(14,7)),(11,10)),5)),6),3))[% ] [% ] [%  setBetweenBits = selected ];
+	TREE 'Tree 74 from search (criterion: minimize Tree value using character matrix)' = (4,(((2,(((((((1,13),9),8),(14,7)),(11,10)),5),12)),6),3))[% ] [% ] [%  setBetweenBits = selected ];
+	TREE 'Tree 75 from search (criterion: minimize Tree value using character matrix)' = (4,(((2,12),(((((((1,13),9),8),(14,7)),(11,10)),5),6)),3))[% ] [% ] [%  setBetweenBits = selected ];
+	TREE 'Tree 76 from search (criterion: minimize Tree value using character matrix)' = (4,((((((((14,(((1,13),9),8)),7),(11,10)),5),2),12),6),3))[% ] [% ] [%  setBetweenBits = selected ];
+	TREE 'Tree 77 from search (criterion: minimize Tree value using character matrix)' = (4,(((((((14,((((1,13),9),8),7)),(11,10)),5),2),12),6),3))[% ] [% ] [%  setBetweenBits = selected ];
+	TREE 'Tree 78 from search (criterion: minimize Tree value using character matrix)' = (4,((((((((8,(14,7)),(11,10)),((1,13),9)),5),2),12),6),3))[% ] [% ] [%  setBetweenBits = selected ];
+	TREE 'Tree 79 from search (criterion: minimize Tree value using character matrix)' = (4,((((((((8,(14,7)),((1,13),9)),(11,10)),5),2),12),6),3))[% ] [% ] [%  setBetweenBits = selected ];
+	TREE 'Tree 80 from search (criterion: minimize Tree value using character matrix)' = (4,(((((((8,(((1,13),9),(14,7))),(11,10)),5),2),12),6),3))[% ] [% ] [%  setBetweenBits = selected ];
+	TREE 'Tree 81 from search (criterion: minimize Tree value using character matrix)' = (4,(((((((8,((14,((1,13),9)),7)),(11,10)),5),2),12),6),3))[% ] [% ] [%  setBetweenBits = selected ];
+	TREE 'Tree 82 from search (criterion: minimize Tree value using character matrix)' = (4,(((((((8,(14,(((1,13),9),7))),(11,10)),5),2),12),6),3))[% ] [% ] [%  setBetweenBits = selected ];
+	TREE 'Tree 83 from search (criterion: minimize Tree value using character matrix)' = (4,(((((((8,(14,7)),(((1,13),9),(11,10))),5),2),12),6),3))[% ] [% ] [%  setBetweenBits = selected ];
+	TREE 'Tree 84 from search (criterion: minimize Tree value using character matrix)' = (4,((((((((((13,9),1),8),(14,7)),(11,10)),5),2),12),6),3))[% ] [% ] [%  setBetweenBits = selected ];
+	TREE 'Tree 85 from search (criterion: minimize Tree value using character matrix)' = (4,(((((((((13,(1,9)),8),(14,7)),(11,10)),5),2),12),6),3))[% ] [% ] [%  setBetweenBits = selected ];
+	TREE 'Tree 86 from search (criterion: minimize Tree value using character matrix)' = (4,(((((((((1,13),9),((14,8),7)),(11,10)),5),2),12),6),3))[% ] [% ] [%  setBetweenBits = selected ];
+	TREE 'Tree 87 from search (criterion: minimize Tree value using character matrix)' = (4,(((((((((1,13),9),(14,(8,7))),(11,10)),5),2),12),6),3))[% ] [% ] [%  setBetweenBits = selected ];
+	TREE 'Tree 88 from search (criterion: minimize Tree value using character matrix)' = (4,(((((((((((1,13),9),14),8),7),(11,10)),5),2),12),6),3))[% ] [% ] [%  setBetweenBits = selected ];
+	TREE 'Tree 89 from search (criterion: minimize Tree value using character matrix)' = (4,((((((((((1,13),9),(14,8)),7),(11,10)),5),2),12),6),3))[% ] [% ] [%  setBetweenBits = selected ];
+	TREE 'Tree 90 from search (criterion: minimize Tree value using character matrix)' = (4,(((((((((((1,13),9),7),8),14),(11,10)),5),2),12),6),3))[% ] [% ] [%  setBetweenBits = selected ];
+	TREE 'Tree 91 from search (criterion: minimize Tree value using character matrix)' = (4,((((((((((1,13),9),(7,8)),14),(11,10)),5),2),12),6),3))[% ] [% ] [%  setBetweenBits = selected ];
+	TREE 'Tree 92 from search (criterion: minimize Tree value using character matrix)' = (4,((((((((((1,13),9),8),(14,7)),(11,10)),5),12),6),2),3))[% ] [% ] [%  setBetweenBits = selected ];
+	TREE 'Tree 93 from search (criterion: minimize Tree value using character matrix)' = (4,(((((((((1,13),9),8),(14,7)),(11,10)),5),12),(2,6)),3))[% ] [% ] [%  setBetweenBits = selected ];
+	TREE 'Tree 94 from search (criterion: minimize Tree value using character matrix)' = (4,((((((((((1,13),9),8),(14,7)),(11,10)),5),6),2),12),3))[% ] [% ] [%  setBetweenBits = selected ];
+	TREE 'Tree 95 from search (criterion: minimize Tree value using character matrix)' = (4,(((((((((1,13),9),8),(14,7)),(11,10)),5),(6,2)),12),3))[% ] [% ] [%  setBetweenBits = selected ];
+	TREE 'Tree 96 from search (criterion: minimize Tree value using character matrix)' = ((((((((((1,13),9),8),(14,7)),(11,10)),5),(12,6)),2),4),3)[% ] [% ] [%  setBetweenBits = selected ];
+	TREE 'Tree 97 from search (criterion: minimize Tree value using character matrix)' = (((((((((1,13),9),8),(14,7)),(11,10)),5),((12,6),2)),4),3)[% ] [% ] [%  setBetweenBits = selected ];
+	TREE 'Tree 98 from search (criterion: minimize Tree value using character matrix)' = ((((12,(((((((1,13),9),8),(14,7)),(11,10)),5),6)),2),4),3)[% ] [% ] [%  setBetweenBits = selected ];
+	TREE 'Tree 99 from search (criterion: minimize Tree value using character matrix)' = ((((12,6),(((((14,(((1,13),9),8)),7),(11,10)),5),2)),4),3)[% ] [% ] [%  setBetweenBits = selected ];
+	TREE 'Tree 100 from search (criterion: minimize Tree value using character matrix)' = ((((12,6),((((14,((((1,13),9),8),7)),(11,10)),5),2)),4),3)[% ] [% ] [%  setBetweenBits = selected ];
+
+END;
+
+
+Begin MESQUITE;
+		MESQUITESCRIPTVERSION 2;
+		TITLE AUTO;
+		tell ProjectCoordinator;
+		timeSaved 1580344723858;
+		getEmployee #mesquite.minimal.ManageTaxa.ManageTaxa;
+		tell It;
+			setID 0 4931137893514221040;
+		endTell;
+		getEmployee #mesquite.charMatrices.ManageCharacters.ManageCharacters;
+		tell It;
+			setID 0 6700782752235304499;
+			tell It;
+				setDefaultOrder  4 5 3 6 7 1 2 0 8 9;
+				attachments ;
+			endTell;
+			mqVersion 361;
+			checksumv 0 3 3667813583 null  getNumChars 10 numChars 10 getNumTaxa 14 numTaxa 14   short true   bits 15   states 15   sumSquaresStatesOnly 549.0 sumSquares 549.0 longCompressibleToShort false usingShortMatrix true   NumFiles 1 NumMatrices 1 errorReportedDuringRun;
+			mqVersion;
+		endTell;
+		getWindow;
+		tell It;
+			suppress;
+			setResourcesState false false 100;
+			setPopoutState 300;
+			setExplanationSize 0;
+			setAnnotationSize 0;
+			setFontIncAnnot 0;
+			setFontIncExp 0;
+			setSize 1019 500;
+			setLocation 71 80;
+			setFont SanSerif;
+			setFontSize 10;
+			getToolPalette;
+			tell It;
+			endTell;
+			desuppress;
+		endTell;
+		getEmployee  #mesquite.trees.BasicTreeWindowCoord.BasicTreeWindowCoord;
+		tell It;
+			makeTreeWindow #4931137893514221040  #mesquite.trees.BasicTreeWindowMaker.BasicTreeWindowMaker;
+			tell It;
+				suppressEPCResponse;
+				setTreeSource  #mesquite.trees.StoredTrees.StoredTrees;
+				tell It;
+					setTreeBlock 1;
+					setTreeBlockID 016ff3e125fe5;
+					toggleUseWeights off;
+				endTell;
+				setAssignedID 1554.1580344626465.6694521596408715830;
+				getTreeWindow;
+				tell It;
+					setExplanationSize 30;
+					setAnnotationSize 20;
+					setFontIncAnnot 0;
+					setFontIncExp 0;
+					setSize 919 428;
+					setLocation 71 80;
+					setFont SanSerif;
+					setFontSize 10;
+					getToolPalette;
+					tell It;
+					endTell;
+					setActive;
+					getTreeDrawCoordinator #mesquite.trees.BasicTreeDrawCoordinator.BasicTreeDrawCoordinator;
+				tell It;
+					suppress;
+					setTreeDrawer  #mesquite.trees.SquareLineTree.SquareLineTree;
+					tell It;
+						setNodeLocs #mesquite.trees.NodeLocsStandard.NodeLocsStandard;
+						tell It;
+							branchLengthsToggle off;
+							toggleScale on;
+							toggleBroadScale off;
+							toggleCenter on;
+							toggleEven on;
+							setFixedTaxonDistance 0;
+						endTell;
+						setEdgeWidth 4;
+						showEdgeLines on;
+						orientRight;
+					endTell;
+					setBackground White;
+					setBranchColor Black;
+					showNodeNumbers off;
+					showBranchColors on;
+					labelBranchLengths off;
+					centerBrLenLabels on;
+					showBrLensUnspecified on;
+					showBrLenLabelsOnTerminals on;
+					setBrLenLabelColor 0 0 255;
+					setNumBrLenDecimals 6;
+					setSelectedTaxonHighlightMode 1;
+					desuppress;
+					getEmployee #mesquite.trees.BasicDrawTaxonNames.BasicDrawTaxonNames;
+					tell It;
+						setColor Black;
+						setTaxonNameStyler  #mesquite.trees.NoColorForTaxon.NoColorForTaxon;
+						toggleShadePartition off;
+						toggleShowFootnotes on;
+						toggleNodeLabels on;
+						toggleCenterNodeNames off;
+						toggleShowNames on;
+						namesAngle ?;
+					endTell;
+				endTell;
+					setTreeNumber 1;
+					setDrawingSizeMode 0;
+					toggleLegendFloat on;
+					scale 0;
+					toggleTextOnTree off;
+					togglePrintName off;
+					showWindow;
+					newAssistant  #mesquite.ancstates.TraceCharacterHistory.TraceCharacterHistory;
+				tell It;
+					suspend ;
+					setDisplayMode  #mesquite.ancstates.ShadeStatesOnTree.ShadeStatesOnTree;
+					tell It;
+						toggleLabels off;
+						togglePredictions off;
+						toggleGray off;
+					endTell;
+					setHistorySource  #mesquite.ancstates.RecAncestralStates.RecAncestralStates;
+					tell It;
+						getCharacterSource  #mesquite.charMatrices.CharSrcCoordObed.CharSrcCoordObed;
+						tell It;
+							setCharacterSource #mesquite.charMatrices.StoredCharacters.StoredCharacters;
+							tell It;
+								setDataSet #6700782752235304499;
+							endTell;
+						endTell;
+						setMethod  #mesquite.parsimony.ParsAncestralStates.ParsAncestralStates;
+						tell It;
+							setModelSource  #mesquite.parsimony.CurrentParsModels.CurrentParsModels;
+							toggleMPRsMode off;
+						endTell;
+						toggleShowSelectedOnly off;
+					endTell;
+					setCharacter 1;
+					setMapping 1;
+					toggleShowLegend on;
+					setColorMode 0;
+					toggleWeights on;
+					setInitialOffsetX 20;
+					setInitialOffsetY 4;
+					setLegendWidth 142;
+					setLegendHeight 161;
+					resume ;
+				endTell;
+				endTell;
+				desuppressEPCResponse;
+				getEmployee #mesquite.trees.ColorBranches.ColorBranches;
+				tell It;
+					setColor Red;
+					removeColor off;
+				endTell;
+				getEmployee #mesquite.ornamental.BranchNotes.BranchNotes;
+				tell It;
+					setAlwaysOn off;
+				endTell;
+				getEmployee #mesquite.ornamental.ColorTreeByPartition.ColorTreeByPartition;
+				tell It;
+					colorByPartition off;
+				endTell;
+				getEmployee #mesquite.ornamental.DrawTreeAssocDoubles.DrawTreeAssocDoubles;
+				tell It;
+					setOn on;
+					toggleShow consensusFrequency;
+					toggleShow bootstrapFrequency;
+					toggleShow posteriorProbability;
+					toggleShow consensusFrequency;
+					toggleShow posteriorProbability;
+					toggleShow bootstrapFrequency;
+					setDigits 4;
+					setThreshold ?;
+					writeAsPercentage off;
+					toggleCentred off;
+					toggleHorizontal on;
+					toggleWhiteEdges on;
+					toggleShowOnTerminals on;
+					setFontSize 10;
+					setOffset 0  0;
+				endTell;
+				getEmployee #mesquite.ornamental.DrawTreeAssocStrings.DrawTreeAssocStrings;
+				tell It;
+					setOn on;
+					toggleCentred on;
+					toggleHorizontal on;
+					setFontSize 10;
+					setOffset 0  0;
+					toggleShowOnTerminals on;
+				endTell;
+				getEmployee #mesquite.trees.TreeInfoValues.TreeInfoValues;
+				tell It;
+					panelOpen false;
+				endTell;
+			endTell;
+		endTell;
+		getEmployee  #mesquite.charMatrices.BasicDataWindowCoord.BasicDataWindowCoord;
+		tell It;
+			showDataWindow #6700782752235304499 #mesquite.charMatrices.BasicDataWindowMaker.BasicDataWindowMaker;
+			tell It;
+				getWindow;
+				tell It;
+					setExplanationSize 30;
+					setAnnotationSize 20;
+					setFontIncAnnot 0;
+					setFontIncExp 0;
+					setSize 919 428;
+					setLocation 71 80;
+					setFont SanSerif;
+					setFontSize 10;
+					getToolPalette;
+					tell It;
+						setTool mesquite.charMatrices.BasicDataWindowMaker.BasicDataWindow.ibeam;
+					endTell;
+					setTool mesquite.charMatrices.BasicDataWindowMaker.BasicDataWindow.ibeam;
+					colorCells  #mesquite.charMatrices.ColorByState.ColorByState;
+				tell It;
+					setStateLimit 9;
+					toggleUniformMaximum on;
+				endTell;
+					colorRowNames  #mesquite.charMatrices.TaxonGroupColor.TaxonGroupColor;
+					colorColumnNames  #mesquite.charMatrices.CharGroupColor.CharGroupColor;
+					colorText  #mesquite.charMatrices.NoColor.NoColor;
+					setBackground White;
+					toggleShowNames on;
+					toggleShowTaxonNames on;
+					toggleTight off;
+					toggleThinRows off;
+					toggleShowChanges on;
+					toggleSeparateLines off;
+					toggleShowStates on;
+					toggleReduceCellBorders off;
+					toggleAutoWCharNames on;
+					toggleAutoTaxonNames off;
+					toggleShowDefaultCharNames off;
+					toggleConstrainCW on;
+					toggleBirdsEye off;
+					toggleShowPaleGrid off;
+					toggleShowPaleCellColors off;
+					toggleShowPaleExcluded off;
+					togglePaleInapplicable on;
+					togglePaleMissing off;
+					toggleShowBoldCellText off;
+					toggleAllowAutosize on;
+					toggleColorsPanel off;
+					toggleDiagonal on;
+					setDiagonalHeight 80;
+					toggleLinkedScrolling on;
+					toggleScrollLinkedTables off;
+				endTell;
+				showWindow;
+				getWindow;
+				tell It;
+					forceAutosize;
+				endTell;
+				getEmployee #mesquite.charMatrices.AlterData.AlterData;
+				tell It;
+					toggleBySubmenus off;
+				endTell;
+				getEmployee #mesquite.charMatrices.ColorCells.ColorCells;
+				tell It;
+					setColor Red;
+					removeColor off;
+				endTell;
+				getEmployee #mesquite.categ.StateNamesEditor.StateNamesEditor;
+				tell It;
+					makeWindow;
+					tell It;
+						setExplanationSize 30;
+						setAnnotationSize 20;
+						setFontIncAnnot 0;
+						setFontIncExp 0;
+						setSize 919 428;
+						setLocation 71 80;
+						setFont SanSerif;
+						setFontSize 10;
+						getToolPalette;
+						tell It;
+							setTool mesquite.categ.StateNamesEditor.StateNamesWindow.ibeam;
+						endTell;
+						rowsAreCharacters on;
+						toggleConstrainChar on;
+						toggleConstrainCharNum 3;
+						togglePanel off;
+						toggleSummaryPanel off;
+					endTell;
+					showWindow;
+				endTell;
+				getEmployee #mesquite.categ.StateNamesStrip.StateNamesStrip;
+				tell It;
+					showStrip off;
+				endTell;
+				getEmployee #mesquite.charMatrices.AnnotPanel.AnnotPanel;
+				tell It;
+					togglePanel off;
+				endTell;
+				getEmployee #mesquite.charMatrices.CharReferenceStrip.CharReferenceStrip;
+				tell It;
+					showStrip off;
+				endTell;
+				getEmployee #mesquite.charMatrices.QuickKeySelector.QuickKeySelector;
+				tell It;
+					autotabOff;
+				endTell;
+				getEmployee #mesquite.charMatrices.SelSummaryStrip.SelSummaryStrip;
+				tell It;
+					showStrip off;
+				endTell;
+				getEmployee #mesquite.categ.SmallStateNamesEditor.SmallStateNamesEditor;
+				tell It;
+					panelOpen true;
+				endTell;
+			endTell;
+		endTell;
+		endTell;
+end;
+
+
