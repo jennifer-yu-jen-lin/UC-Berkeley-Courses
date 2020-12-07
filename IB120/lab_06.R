@@ -1,0 +1,171 @@
+## 1
+#### From a conceptual standpoint, the expected value and the mean are the same thing, but in which sort of context or scenario would you use each of these terms? Give examples for both.
+
+## Expected Value ##
+# Expected value is usually used in probability distribution. Given some random variables, we can calcualte the expected value.
+# Expected value is the average value of a random variable over a large number of experiments.
+# For example, given a weighted dice (the probablility of getting each side one is porpotion to the value of that side),
+# we can say that the expected value of rolling a large number of dice is (1*1 + 2*2 + 3*3 + 4*4 + 5*5 + 6*6 ) / (1+2+3+4+5+6)
+
+## Mean ##
+# Mean is defined as the sum of all the elements divided by the sum of their frequencies.
+# Mean is frequently used to describe a set of values in real life.
+# For example, after an exam, every student gets a grade for that.
+# If we want to evaluate how these students perform on the exam, we can calculate the mean of their scores by summing up their scores and then dividing by the numbers of the students.
+
+## 2
+#### Why does the cumulative distribution function of the exponential distribution look like a reflection of the PDF? 
+#### Do the math by hand to prove why that is the case. What assumption about a parameter must be made in order for the CDF to be an inversion about the x-axis?
+
+
+## 3
+#### Write a function that creates a logarithmic seq (e.g. 1,10,100,1000,...) and populate a vector up to 10 elements. 
+#### Make random draws from the exponential distribution and plot the variance and expected value of each instance. When does it appear to normalize?
+logSeq_fun <- function(length_N){
+  return(10^(seq(from=0,length.out = length_N)))
+}
+logSeq <- logSeq_fun(10)
+print(logSeq)
+
+# 10 random draws (J=10)
+J <- 10
+I <- 100
+var <- c()
+expVal <- c()
+for(j in 1:J){
+  randomDraws <- c()
+  for (i in 1:I){
+    randomDraws[i] <- sample(logSeq, 1)
+  }
+  var[j] <- var(randomDraws)
+  expVal[j] <- mean(logSeq)
+}
+data10 <- data.frame(cbind(xVal=1:J,var,expVal))
+# ggplot(data,aes(x=xVal, y = var)) + geom_point()
+# ggplot(data,aes(x=xVal, y = expVal)) + geom_point()
+ggplot(data10, aes(x=var)) + geom_histogram(bins=20) # VAR: When there are only 10 random draws, the result does not appear to normalize.
+ggplot(data10, aes(x=expVal)) + geom_histogram() # EXPECTED VALUE: The result for expected value is always 111111111.
+
+# 1000 random draws (J=10)
+J <- 1000
+I <- 100
+var <- c()
+expVal <- c()
+for(j in 1:J){
+  randomDraws <- c()
+  for (i in 1:I){
+    randomDraws[i] <- sample(logSeq, 1)
+  }
+  var[j] <- var(randomDraws)
+  expVal[j] <- mean(logSeq)
+}
+data1000 <- data.frame(cbind(xVal=1:J,var,expVal))
+# ggplot(data,aes(x=xVal, y = var)) + geom_point()
+# ggplot(data,aes(x=xVal, y = expVal)) + geom_point()
+ggplot(data1000, aes(x=var)) + geom_histogram(bins=20) # VAR: When there are 1000 random draws, the result does  appear to normalize.
+ggplot(data1000, aes(x=expVal)) + geom_histogram() # EXPECTED VALUE: The result for expected value is always 111111111.
+
+## 4
+#### Find the variance of the distributions you created in the question above. 
+#### What is the difference between the variance and the standard deviation?
+var(logSeq)
+# sd(logSeq)^2 == var(logSeq)
+sd(logSeq)^2 == var(logSeq)
+
+## 5
+#### Find the expected value of the exponential distribution using the dexp function and also find the expected value of 1000 random draws. 
+#### Why do you think there is a discrepancy between these two values?
+y_dexp <- dexp(1:10)
+plot(y_dexp)
+
+lower <- floor(qexp(0.001, rate=0.2))
+upper <- ceiling(qexp(0.999, rate=0.2))
+t <- seq(lower,upper,0.1)
+dexp02 <- data.frame(T=t, Density=dexp(t, rate=0.2))  
+
+expVal_dexp <- mean(dexp02$Density)
+random_draws <- c()
+for(i in 1:1000){
+  random_draws[i] <- sample(dexp02$Density)
+}
+expVal_1000randomDraws <- mean(random_draws)
+
+# The difference of expVal_dexp and expVal_1000randomDraws is very small.
+expVal_dexp - expVal_1000randomDraws
+
+# When we have random draws from the population, only when infinite draws can make make [the expected value of the random draws] the same as [the expected value of the distribution].
+
+## 6
+#### Why does the quantile function for the exponential distribution have an undefined expected value?
+q <- seq(0.001,0.999,0.001)
+qexp02 <- data.frame(Q=q, Quantile=qexp(q, rate=0.2))  
+head(dexp02)
+# The quantile function for the exponential distribution has an undefined expected value 
+# because the expected value for an absolutely continuous distribution is defined as ∫xf(x)dx where f is the density function and the integral is taken over the domain of f (which is −INF to INF).
+# For a random variable X, if we take a draw from its distribution you know it will not be not likely be equal to the average. Therefore we are not "expecting" it to be some particular value. Thus, expected value is undefined.
+
+## 7
+#### What do we mean by saying that exponential distributions do not have a memory?
+# The exponential distribution is memoryless because the past has no bearing on its future behavior.
+# Every instant is like the beginning of a new random period, which has the same distribution regardless of how much time has already elapsed.
+# The exponential is the only memoryless continuous random variable.
+
+## 8
+#### Name a few examples of when to use the exponential distribution or when it comes up in nature.
+# The growth of the population is exponential, given infinite resources of energy and space.
+# Microorganisms in culture
+# Compound interest
+
+## 9
+#### Create 3 random number generators in R with different seeds and provide the first ten results from each.
+# 1st seed = 1
+set.seed(1)
+rnorm(10)
+# 2nd seed = 5
+set.seed(5)
+rnorm(10)
+# 3rd seed = 15
+set.seed(15)
+rnorm(10)
+
+## 10 BONUS
+#### Prove how the exponential distribution is a special case of the gamma distribution?
+
+
+## 11 BONUS
+#### Demonstrate and prove (with a script and visual representations) of how the exponential distribution is memoryless.
+lambda <- 1/3
+avrg <- 1/lambda
+std.dv <- sqrt(1/lambda^2)
+
+range <- seq(0, avrg+5*std.dv, 0.01)
+y <- dexp(range, lambda)
+
+x <- 4
+# P(X>4)
+1-pexp(x+0,lambda) / 1-pexp(0,lambda)
+# P(X>6+4|X>6) == P(X>4)
+(1-pexp(x+6,lambda)) / (1-pexp(6,lambda))
+
+
+# Draw the exponential distribution
+# P(X>4)
+# In the following two plots,
+# the ratio of [ blue part / grey part ] should be the same value.
+plot(range, y, type="l", ylim=c(0,max(y)+0.01))
+cord.a <- c(0, seq(min(range),x,0.01),x)
+cord.b <- c(0,dexp(seq(min(range),x,0.01),lambda),0)
+polygon(cord.a,cord.b,col="blue")
+cord.c <- c(x, seq(max(range),x,-0.01),x)
+cord.d <- c(0,dexp(seq(max(range),x,-0.01),lambda),0)
+polygon(cord.c,cord.d,col=grey(0.90))
+
+
+# P(X>6+4|X>6) == P(X>4)
+plot(range, y, type="l", ylim=c(0,max(y)+0.01))
+cord.e <- c(6, seq(6,6+x,0.01),6+x)
+cord.f <- c(0,dexp(seq(6,6+x,0.01),lambda),0)
+polygon(cord.e,cord.f,col="blue")
+cord.g <- c(6+x, seq(max(range),6+x,-0.01),6+x)
+cord.h <- c(0,dexp(seq(max(range),6+x,-0.01),lambda),0)
+polygon(cord.g,cord.h,col=grey(0.90))
